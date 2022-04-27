@@ -28,6 +28,7 @@ export default function MainpageBox() {
   const [univ_list, setUser] = useState("");
   useEffect(() => {
     const msg = process.env.REACT_APP_TEST_MESSAGE
+    console.log(msg);
     Axios.post("/home/univ").then((response) => {
       if (response.data) {
         console.log(response.data);
